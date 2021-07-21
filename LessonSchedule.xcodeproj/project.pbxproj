@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EAD75D7026A4656B00A62996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD75D6F26A4656B00A62996 /* AppDelegate.swift */; };
-		EAD75D7426A4656B00A62996 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD75D7326A4656B00A62996 /* ViewController.swift */; };
+		EAD75D7426A4656B00A62996 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD75D7326A4656B00A62996 /* MainTabBarController.swift */; };
 		EAD75D7926A4656F00A62996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAD75D7826A4656F00A62996 /* Assets.xcassets */; };
 		EAD75D7C26A4656F00A62996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD75D7A26A4656F00A62996 /* LaunchScreen.storyboard */; };
 		EAD75D8726A4656F00A62996 /* LessonScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD75D8626A4656F00A62996 /* LessonScheduleTests.swift */; };
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		EAD75D6C26A4656B00A62996 /* LessonSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessonSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD75D6F26A4656B00A62996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EAD75D7326A4656B00A62996 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EAD75D7326A4656B00A62996 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		EAD75D7826A4656F00A62996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAD75D7B26A4656F00A62996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAD75D7D26A4656F00A62996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,11 +95,9 @@
 		EAD75D6E26A4656B00A62996 /* LessonSchedule */ = {
 			isa = PBXGroup;
 			children = (
-				EAD75D6F26A4656B00A62996 /* AppDelegate.swift */,
-				EAD75D7326A4656B00A62996 /* ViewController.swift */,
-				EAD75D7826A4656F00A62996 /* Assets.xcassets */,
-				EAD75D7A26A4656F00A62996 /* LaunchScreen.storyboard */,
-				EAD75D7D26A4656F00A62996 /* Info.plist */,
+				EAD75D9F26A8B18000A62996 /* Application */,
+				EAD75DA026A8B1A700A62996 /* Controllers */,
+				EAD75DA126A8B1E100A62996 /* Resources */,
 			);
 			path = LessonSchedule;
 			sourceTree = "<group>";
@@ -120,6 +118,32 @@
 				EAD75D9326A4656F00A62996 /* Info.plist */,
 			);
 			path = LessonScheduleUITests;
+			sourceTree = "<group>";
+		};
+		EAD75D9F26A8B18000A62996 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EAD75D6F26A4656B00A62996 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EAD75DA026A8B1A700A62996 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAD75D7326A4656B00A62996 /* MainTabBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EAD75DA126A8B1E100A62996 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EAD75D7826A4656F00A62996 /* Assets.xcassets */,
+				EAD75D7A26A4656F00A62996 /* LaunchScreen.storyboard */,
+				EAD75D7D26A4656F00A62996 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD75D7426A4656B00A62996 /* ViewController.swift in Sources */,
+				EAD75D7426A4656B00A62996 /* MainTabBarController.swift in Sources */,
 				EAD75D7026A4656B00A62996 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LessonSchedule/Info.plist;
+				INFOPLIST_FILE = LessonSchedule/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,7 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LessonSchedule/Info.plist;
+				INFOPLIST_FILE = LessonSchedule/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
