@@ -13,6 +13,9 @@
 		EAD75D7C26A4656F00A62996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD75D7A26A4656F00A62996 /* LaunchScreen.storyboard */; };
 		EAD75D8726A4656F00A62996 /* LessonScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD75D8626A4656F00A62996 /* LessonScheduleTests.swift */; };
 		EAD75D9226A4656F00A62996 /* LessonScheduleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD75D9126A4656F00A62996 /* LessonScheduleUITests.swift */; };
+		EAD75DA326AB2BA400A62996 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD75DA226AB2BA400A62996 /* ScheduleViewController.swift */; };
+		EAD75DA526AB2BCA00A62996 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD75DA426AB2BCA00A62996 /* TasksViewController.swift */; };
+		EAD75DA726AB2BEF00A62996 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD75DA626AB2BEF00A62996 /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		EAD75D8D26A4656F00A62996 /* LessonScheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LessonScheduleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD75D9126A4656F00A62996 /* LessonScheduleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonScheduleUITests.swift; sourceTree = "<group>"; };
 		EAD75D9326A4656F00A62996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAD75DA226AB2BA400A62996 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		EAD75DA426AB2BCA00A62996 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		EAD75DA626AB2BEF00A62996 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				EAD75D7326A4656B00A62996 /* MainTabBarController.swift */,
+				EAD75DA226AB2BA400A62996 /* ScheduleViewController.swift */,
+				EAD75DA426AB2BCA00A62996 /* TasksViewController.swift */,
+				EAD75DA626AB2BEF00A62996 /* ContactsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -275,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD75DA326AB2BA400A62996 /* ScheduleViewController.swift in Sources */,
+				EAD75DA526AB2BCA00A62996 /* TasksViewController.swift in Sources */,
 				EAD75D7426A4656B00A62996 /* MainTabBarController.swift in Sources */,
 				EAD75D7026A4656B00A62996 /* AppDelegate.swift in Sources */,
+				EAD75DA726AB2BEF00A62996 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
