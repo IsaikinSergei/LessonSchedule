@@ -17,6 +17,16 @@ class ScheduleViewController: UIViewController {
         calendar.translatesAutoresizingMaskIntoConstraints = false
         return calendar
     }()
+    
+    // MARK: - создаём кнопку
+    let showHideButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Open calendar", for: .normal)
+        button.setTitleColor(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
+        button.titleLabel?.font = UIFont(name: "Avenir Next Demo Bold", size: 14)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +34,16 @@ class ScheduleViewController: UIViewController {
         view.backgroundColor = .white
         title = "Schedule"
         
+        calendar.delegate = self
+        calendar.dataSource = self
+        
         setConstraints()
+        
+        showHideButton.addTarget(self, action: #selector(showHideButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func showHideButtonTapped() {
+        print("Tap")
     }
 }
 
@@ -42,6 +61,7 @@ extension ScheduleViewController: FSCalendarDataSource, FSCalendarDelegate {
 
 extension ScheduleViewController {
     
+    // размещаем календарь на экране
     func setConstraints() {
         view.addSubview(calendar)
         
@@ -52,6 +72,14 @@ extension ScheduleViewController {
             calendar.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
             calendar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             calendar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+        ])
+        // размещаем кнопку на экране
+        view.addSubview(showHideButton)
+        NSLayoutConstraint.activate([
+            showHideButton.topAnchor.constraint(equalTo: calendar.bottomAnchor, constant: 0),
+            showHideButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            showHideButton.widthAnchor.constraint(equalToConstant: 120),
+            showHideButton.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
 }
