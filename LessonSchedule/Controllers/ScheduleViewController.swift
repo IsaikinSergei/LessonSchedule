@@ -37,13 +37,21 @@ class ScheduleViewController: UIViewController {
         calendar.delegate = self
         calendar.dataSource = self
         
+        calendar.scope = .week
+        
         setConstraints()
         
         showHideButton.addTarget(self, action: #selector(showHideButtonTapped), for: .touchUpInside)
     }
     
     @objc func showHideButtonTapped() {
-        print("Tap")
+        if calendar.scope == .week {
+            calendar.setScope(.month, animated: true)
+            showHideButton.setTitle("Close calendar", for: .normal)
+        } else {
+            calendar.setScope(.week, animated: true)
+            showHideButton.setTitle("Open calendar", for: .normal)
+        }
     }
 }
 
